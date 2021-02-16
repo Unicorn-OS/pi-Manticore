@@ -1,0 +1,7 @@
+---
+- name: Install missing LUKS library
+  apt:
+    pkg:
+    - libblockdev-crypto2
+  become: true
+  notify: restart udisks2.service

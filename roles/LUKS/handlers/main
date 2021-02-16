@@ -1,0 +1,8 @@
+---
+
+- name: restart udisks2.service
+  systemd:
+    state: restarted
+    daemon_reload: yes
+    name: udisks2.service
+  become: true
